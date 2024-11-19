@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $stmt = $conn->prepare("UPDATE tasks SET task=? WHERE id=?");
         $stmt->bind_param("si", $task, $id); 
         if ($stmt->execute()) {
-            header("Location: indexJ.php");
+            header("Location: index.php");
             exit; 
         }
         $stmt->close();
